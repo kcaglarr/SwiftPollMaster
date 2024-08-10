@@ -11,7 +11,7 @@ struct PollOptionView: View {
     var choice: PollOption
     var totalVotes: Int
     var showResults: Bool
-    let feedBlueColor = HexColor("#2155EC")
+    let pollBlueColor = HexColor("#2155EC")
     let regular14 = Font.system(size: 14, weight: .regular)
     let medium14 = Font.system(size: 14, weight: .medium)
     
@@ -39,7 +39,7 @@ struct PollOptionView: View {
                 HStack {
                     Text(choice.name ?? "")
                         .font(showResults ? medium14 : regular14)
-                        .foregroundColor(showResults ? .black : feedBlueColor)
+                        .foregroundColor(showResults ? .black : pollBlueColor)
                     Spacer()
                     if showResults {
                         
@@ -62,7 +62,7 @@ struct PollOptionView: View {
                                 .stroke(Color.clear, lineWidth: 1)
                         } else {
                             RoundedRectangle(cornerRadius: 8)
-                                .stroke(feedBlueColor, lineWidth: 2)
+                                .stroke(pollBlueColor, lineWidth: 2)
                         }
                     }
                 )
@@ -76,7 +76,7 @@ struct PollOptionView: View {
     PollOptionView(
         choice: .init(
             id: "1",
-            name: "Deneme",
+            name: "Choice",
             isSelected: false,
             percentageVotes: 30
         ),

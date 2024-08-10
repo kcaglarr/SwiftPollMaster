@@ -84,19 +84,19 @@ public struct PollView: View {
         choices: [
             .init(
                 id: "1",
-                name: "Test 1",
+                name: "Choice 1",
                 isSelected: false,
                 percentageVotes: 5
             ),
             .init(
                 id: "2",
-                name: "Test 2",
+                name: "Choice 2",
                 isSelected: true,
                 percentageVotes: 95
             ),
             .init(
                 id: "3",
-                name: "Test 3",
+                name: "Choice 3",
                 isSelected: false,
                 percentageVotes: 0
             )
