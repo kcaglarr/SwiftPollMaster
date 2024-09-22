@@ -1,18 +1,15 @@
-public struct PollOption: Decodable, Equatable, Identifiable {
-    public let id: String?
-    public let name: String?
-    public var isSelected: Bool?
-    public let percentageVotes: Int?
+public struct PollOption {
+    public let name: String
+    public var isSelected: Bool
+    public let votePercentage: Double
     
     public init(
-        id: String?,
-        name: String?,
-        isSelected: Bool?,
-        percentageVotes: Int?
+        name: String,
+        isSelected: Bool,
+        votePercentage: Double
     ) {
-        self.id = id
         self.name = name
         self.isSelected = isSelected
-        self.percentageVotes = percentageVotes
+        self.votePercentage = votePercentage
     }
 }
